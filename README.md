@@ -9,7 +9,7 @@ First, both sender and receiver must generate an agreed upon list of random, jun
 
 **Sender:** The sender will convert the clear-text message to a binary stream, and iterate through the pre-shared list of hostnames. If a bit is 1, the sender will resolve that hostname, thus cacheing it in the DNS server. If the the bit is 0, the sender will not query that hostname, and it will not be cached.
 
-**Receiver:** At an agreed upon time, the receiver will first query a large number of junk domain names to estimate an average time-to-query of fresh queries, then identify the time-to-query of cached hostname. Using these two input fields, at an agreed upon time, he will query the pre-shared list of hostnames. If the time-to-query is closer to the cached time, the bit will be set to 1. Conversely, fi the time-to-query is closer to the new query time, the bit will be set to 0. The stream of 0's and 1's is then converted to ASCII and printed out to the terminal.
+**Receiver:** At an agreed upon time, the receiver will first query a large number of junk domain names to estimate an average time-to-query of fresh queries, then identify the time-to-query of cached hostname. Using these two input fields, at an agreed upon time, he will query the pre-shared list of hostnames. If the time-to-query is closer to the cached time, the bit will be set to 1. Conversely, if the time-to-query is closer to the new query time, the bit will be set to 0. The stream of 0's and 1's is then converted to ASCII and printed out to the terminal.
 
 ## Usage
 ```make all
