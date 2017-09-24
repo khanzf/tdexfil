@@ -20,7 +20,7 @@ At an agreed upon time, the sender performs:
 ```
 ./sender
 ```
-Maybe 1 second later, the receiver should run
+Maybe 1 second later, the receiver should run:
 ```
 ./receiver
 ```
